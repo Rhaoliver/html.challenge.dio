@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 4fr);
+    grid-template-rows: 2fr repeat(2, 4fr) 1fr;
+    grid-template-areas: "sidebar header header"
+                        "sidebar main main"
+                        "sidebar main main"
+                        "sidebar footer footer"
+}
+
+header {
+    background-color: rgb(18, 104, 104);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+header img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+main {
+    background-color: rgb(248, 255, 255);
+    grid-area: main;
+    padding: 50px;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(18, 104, 104);
+}
+
+#tableService {
+    margin: 50px 90px;
+}
+
+table {
+    width: 800px;
+    text-align: center;
+    border: solid 3px;
+}
+
+table th {
+    padding: 5px;
+    font-weight: medium;
+    background-color: rgb(18, 104, 104);
+    color: aliceblue;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgb(154, 180, 180);
+}
+
+.contacts {
+    display: flex;
+}
+
+#generalContacts {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding-top: 50px;
+}
+
+#form {
+    padding-top: 50px;
+}
+
+input {
+    border: solid 1px rgb(18, 104, 104);
+    border-radius: 5px;
+    width: 380px;
+    height: 25px;
+}
+textarea {
+    border: solid 1px rgb(18, 104, 104);
+    border-radius: 5px;
+    width: 380px;
+    height: 200px;
+}
+
+button {
+    background-color: rgb(18, 104, 104);
+    color: aliceblue;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: rgb(140, 192, 192);
+    grid-area: sidebar;
+    padding-top: 160px;
+    padding-left: 30px;
+    color: aliceblue;
+}
+
+
+nav li {
+    padding: 10px;
+}
+
+nav li a {
+    color: aliceblue;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(18, 104, 104);
+    grid-area: footer;
+    padding: 20px 10px 10px 50px;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
